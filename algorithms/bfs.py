@@ -20,6 +20,7 @@ class BFS(BaseAlgo):
         while not queue.empty():
             cost, depth, currBoard, step = queue.get()
 
+            # adjacent boards
             empty_i, empty_j = self.puzzle.__get_empty_slot__(currBoard)
             neighbhours = self.puzzle.__get_neighbour_board__(currBoard)
 
@@ -28,6 +29,7 @@ class BFS(BaseAlgo):
                     visited.append(child)
                     nodes_explored += 1
 
+                    # child's features
                     _child_cost = cost + child[empty_i][empty_j]
                     _child_depth = depth + 1
                     _child_step = self.puzzle.__get_step__(
