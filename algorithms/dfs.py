@@ -46,5 +46,5 @@ class DFS(BaseAlgo):
         depth = 0
         step = []
         
-        self.__dfs__(visited, cost, depth, self.puzzle.initial_board, step)
+        return self.__dfs__(visited, cost, depth, self.puzzle.initial_board, step)
         
