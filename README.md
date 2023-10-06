@@ -5,41 +5,45 @@
     - BFS (Breadth first search)
     - DFS (Depth first search)
     - DLS (Depth limited Search)
-    - UCS (Uniform cost search)
-    - IDS (Iterative deepening search)
     - GREEDY (Greedy search)
+    - IDS (Iterative deepening depth-first search)
+    - UCS (Uniform cost search)
 
 ## 👨‍💻 Problem Statement
 In this project, our goal is to develop an agent that can solve a modified version of the classic 8-puzzle problem, called the Expense 8 puzzle problem. Similar to the original problem, the task involves rearranging 8 tiles on a 3x3 grid, where only one tile can be moved at a time to an adjacent blank location. **However, in this modified version, each tile is assigned a cost that represents the expense of moving that particular tile**. 
 <br/> <br/> For instance, moving the tile marked with 6 would cost 6. Our objective is to determine the optimal order of moves that would result in the desired configuration of the puzzle while minimizing the total expense incurred.
 
-## ⭐️ Given inputs
+## ✨ Given Inputs Format
     start.txt - contains the initial state of the board
     goal.txt - contains the goal state of the board
 
+## ⭐️ Sample Inputs
+    Start orientation:
+        2 4 3
+        1 0 6
+        7 5 8
+
+    Goal orientation:
+        1 2 3
+        4 5 6
+        7 8 0
+
 ## ⚡ Sample Output
-    Nodes Popped: 97 
-    Nodes Expanded: 64
-    Nodes Generated: 173
-    Max Fringe Size: 77
-    Solution Found at depth 12 with cost of 63.
-    Steps:
-        Move 7 Left
-        Move 5 Up
-        Move 8 Right
-        Move 7 Down
-        Move 5 Left
-        Move 6 Down
-        Move 3 Right
+    Algorithm: A* Search
+    Time taken: 2.025 ms
+
+    Nodes Explored:  20
+    Solution Found at depth 6 with cost of 24.
+    Steps: 
+        Move 4 Down
         Move 2 Right
         Move 1 Up
-        Move 4 Up
-        Move 7 Left
-        Move 8 Left 
+        Move 4 Left
+        Move 5 Up
+        Move 8 Left
 
 ## 👇 Requirements
-- Python 3.x (for python version)
-- Java (for java verison)
+- Install Python 3.x version or greater
 
 ## 🛠️ How to Run (step by step)
 Open Terminal and follow the steps below:
@@ -50,10 +54,5 @@ Open Terminal and follow the steps below:
 2. Change to repository folder
     > cd 8-puzzle-solver
 
-3. Change to folder 
-    - For python version:
-    > cd python\ version
-    - For java vesion:
-    > cd java\ version
-
-4. xx
+3. Run Driver function
+    >python expense_8_puzzle.py
