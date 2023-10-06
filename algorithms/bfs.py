@@ -44,4 +44,5 @@ class BFS(BaseAlgo):
                         self.puzzle.solution.depth_found = _child_depth
                         self.puzzle.solution.total_cost = _child_cost
                         self.puzzle.solution.steps = _child_step
-                        return
+                        return True
+        return False
