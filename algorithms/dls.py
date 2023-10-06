@@ -54,4 +54,4 @@ class DLS(BaseAlgo):
         depth = 0
         step = []
 
-        self.__dls__(visited, cost, depth, self.puzzle.initial_board, step)
+        return self.__dls__(visited, cost, depth, self.puzzle.initial_board, step)
