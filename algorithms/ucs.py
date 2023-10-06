@@ -9,7 +9,7 @@ class UCS(BaseAlgo):
         
     def run(self):
         visited = []
-        nodes_explored = 0
+        nodes_explored = 1
         priority_queue = PriorityQueue()
         
         # Add initial board to the priority queue
@@ -18,7 +18,6 @@ class UCS(BaseAlgo):
         
         while not priority_queue.empty():
             cost, depth, currBoard, step = priority_queue.get()
-            nodes_explored += 1
 
             # Solution found
             if currBoard == self.puzzle.goal_board:
@@ -40,6 +39,7 @@ class UCS(BaseAlgo):
             neighbhours = self.puzzle.__get_neighbour_board__(currBoard)
             
             for child in neighbhours:
+                nodes_explored += 1
                 # child's features
                 _child_cost = cost + child[empty_i][empty_j]
                 _child_depth = depth + 1
